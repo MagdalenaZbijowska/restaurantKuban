@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
+
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style3.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous">
+    </script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous">
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Courgette|Merienda&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="dismiss">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+
+            <div class="sidebar-header">
+                <h2>Menu</h2>
+            </div>
+
+            <ul class="list-unstyled components">
+                <!--<p>Dummy Heading</p>-->
+                <li class="active">
+                    <img class="icons" src="img/icons/champagne-glass.png" alt="">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Wesela i imprezy</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="salweselna.html">Sala weselna</a>
+                        </li>
+                        <li>
+                            <a href="salagoralska.html">Sala góralska</a>
+                        </li>
+                        <li>
+                            <a href="bacówka.html">Bacówka</a>
+                        </li>
+                        <li>
+                            <a href="salaklasyczna.html">Sala klasyczna</a>
+                        </li>
+                        <li>
+                            <a href="kubanEvents.html">Dekoracje i atrakcje</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <img class="icons" src="img/icons/serving-dish.png" alt="">
+                    <a href="restauracja.html">Restauracja</a>
+                    <img class="icons" src="img/icons/bed.png" alt="">
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Hotel</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="hotel.html">Pokoje noclegowe</a>
+                        </li>
+                        <!-- <li>
+                            <a href="#">Spa</a>
+                        </li>-->
+                    </ul>
+                </li>
+                <!--   <li>
+                    <a href="#">Galeria</a>
+                </li>
+                <li>
+                    <a href="#">Kontakt</a>
+                </li>-->
+            </ul>
+            <!--  <a href="http://www.decomania.com.pl/"><img src="/img/inne/decomania.png" style="width:50%; margin-left: 20%;" alt="logo"></a> 
+        <a href="kubanEvents.html"><img src="/img/kuban events/logo/png.png" style="width:50%; margin-left: 20%;" alt="logo"></a> -->
+       <a href="index.html">    <img style="width: 50%; margin-top:5%; margin-left: 20%;" src="img/inne/Logo.png" alt="">
+       </a> 
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" style="position: fixed; z-index:4;">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid" style="background-color: #CCB88F; padding: 5%;"
+                    style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Menu</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="overlay"></div>
+        <!--logo-->
+        <img src="img/kuban events/logo/png.png" class="img-fluid logo" style=" max-width: 11% !important;" alt="logo">
+        <span id="example"></span>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="preloaderEvents">
+                    <img src="img/kuban events/logo/png.png"
+                        style="width: 35%; position: absolute; top: 30%;  left: 50%; transform: translate(-50%, -50%)">
+                    <img src="img/inne/decomania.png"
+                        style="width: 35%; position: absolute; top: 70%;  left: 50%; transform: translate(-50%, -50%)">
+                </div>
+                <div class="carousel-item active">
+                    <img src="img/kuban events/3.jpg" class="d-block w-100" style="width: 95%!important;"
+                        alt="sala weselna">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <img src="img/kuban events/logo/png.png" class="img-fluid"
+                style=" max-width: 20%;   margin:0 auto;  display:block;" alt="logo">
+
+            <h2 style="text-align: center">Z naszymi atrakcjami stworzysz niezapomnianą, pełną wrażeń imprezę! </h2>
+
+            <div class="row" style="padding: 4% !important">
+
+                <div class="row" style="margin-top: 5%;">
+                    <div class="col-sm-12">
+                        <h3>Drink Bar</h3>
+                    </div>
+                    <div class="col-sm-4" style="margin-top: 8%">
+                        <p>Barman serwujący <b style="font-weight: bold">egzotyczne drinki z owocowymi dekoracjami</b>
+                            to świetna atrakcja na każdym przyjęciu.
+                            Przygotowywane przez nas koktajle to <b style="font-weight: bold">połączenie wysokiej
+                                jakości produktów z naszymi umiejętnościami, pasją i uśmiechem.</b>
+                            Nasz profesjonalny i elegancki bar nie tylko dobrze się prezentuje, jest również wyposażony
+                            w nalewak do piwa. Goście mogą skosztować w drink barze takich drinków jak <b
+                                style="font-weight: bold">Mojito, Cosmopoliatn czy Cuba Libre, ale również napić się
+                                ulubionego piwa. </b> </p>
+                    </div>
+                    <div class="col-sm-8"> <img src="img/kuban events/DRINK BAR/4.jpg" class="d-block w-100"
+                            style="width: 60% !important;" alt="sala weselna"></div>
+                </div>
+                <section class="gallery-block compact-gallery">
+                    <div class="container">
+
+                        <div class="row no-gutters">
+
+
+
+                            <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                                <a class="lightbox" href="img/kuban events/DRINK BAR/1.jpg">
+                                    <img class="img-fluid image" src="img/kuban events/DRINK BAR/1.jpg">
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                                <a class="lightbox" href="img/kuban events/DRINK BAR/2.jpg">
+                                    <img class="img-fluid image" src="img/kuban events/DRINK BAR/2.jpg">
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                                <a class="lightbox" href="img/kuban events/DRINK BAR/5.jpg">
+                                    <img class="img-fluid image" src="img//kuban events/DRINK BAR/5.jpg">
+                                </a>
+                            </div>
+
+                        </div>
+
+                </section>
+
+                <div class="row" style="margin-top: 5%;">
+                    <div class="col-sm-12">
+                        <h3 style="text-align: right">Fontanna czekoladowa </h3>
+                    </div>
+                    <div class="col-sm-8"> <img src="img/kuban events/FONTANNA CZEKOLADOWA/2.jpg" class="d-block w-100"
+                            alt="sala weselna"></div>
+                    <div class="col-sm-4" style="margin-top: 8%">
+                        <p>Czekolada to <b style="font-weight: bold">fenomen wśród słodyczy, większość z nas ma do niej
+                                zamiłowanie. </b>
+                            Dlaczego więc nie sprawić sobie czekoladowej uczty na przyjęciu?
+                            Fontanna czekoladowa to świetna propozycja dla każdego fana słodkości.
+                            <b style="font-weight: bold"> Oryginalna belgijska czekolada, spływająca kaskadowo
+                            </b>przybiera postać piętrowego <b style="font-weight: bold"> tortu czekoladowego, w którym
+                                zanurzamy kawałki owoców. </b>
+                        </p>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 5%;">
+                    <div class="col-sm-12">
+                        <h3>Fontanna alkoholowa </h3>
+                    </div>
+
+                    <div class="col-sm-12" style="margin-top: 5%">
+                        <p>Fontanna alkoholowa to wciąż jeszcze <b style="font-weight: bold">nowość na polskim
+                                rynku.</b>
+                            Dzięki niej zaserwujesz gościom specjalnie przygotowany <b style="font-weight: bold">poncz w
+                                bardzo stylowej formie. </b>
+                            Fontanna alkoholowa to świetna <b style="font-weight: bold">alternatywa dla barmana lub
+                                atrakcyjny dodatek do Drink Baru,</b> który przykuwa uwagę Gości i <b
+                                style="font-weight: bold">nadaje przyjęciu elegancji.</b>
+                            Mieniąca się różnymi kolorami <b style="font-weight: bold">fontanna to ciekawa atrakcja,
+                                która zaspokoi zmysły wzroku i smaku </b>oraz ma działanie integracyjne dla uczestników
+                            imprezy.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-sm"> <img src="img/kuban events/FONTANNA ALKOHOLOWA/1.jpg" class="d-block w-100"
+                            alt="sala weselna"></div>
+                    <div class="col-sm"> <img src="img/kuban events/FONTANNA ALKOHOLOWA/2.jpg" class="d-block w-100"
+                            alt="sala weselna"></div>
+                    <div class="col-sm"> <img src="img/kuban events/FONTANNA ALKOHOLOWA/3.jpg" class="d-block w-100"
+                            alt="sala weselna"></div>
+                </div>
+
+                <div class="row" style="margin-top: 5%;">
+                    <div class="col-sm-12">
+                        <h3>Animacje dla dzieci </h3>
+                    </div>
+                    <div class="col-sm-8" style="margin-top: 3%">
+
+                        <p>Dzieci to z pewnością wymagający goście. Oczekują dużo uwagi, <b style="font-weight: bold">
+                                kreatywnych pomysłów, ciekawych zabaw oraz zapewnienia im opieki.</b>
+                            Dzięki naszym animacjom impreza będzie <b style="font-weight: bold"> niezapomniana także dla
+                                najmłodszych.</b>
+                            Sprawimy aby urodziny Twojego dziecka były <b style="font-weight: bold"> bajeczne, aby
+                                kreatywnie spędziło czas na imprezach okolicznościowych i czuło się wyjątkowe. </b>
+                            Jeśli chcesz uczynić niepowtarzalną imprezę dla dzieci, możesz skorzystać z przygotowanych
+                            przez nas dodatkowych atrakcji, takich jak:
+                            <ul>
+                                <li>
+                                    <p>zamykanie dzieci <b style="font-weight: bold"> w wielkiej bańce mydlanej</b>
+                                </li>
+                                <li>
+                                    <p>duża maszyna z<b style="font-weight: bold"> kolorową watą cukrową</b></p>
+                                </li>
+                                <li>
+                                    <p>gigantyczna, chodząca <b style="font-weight: bold"> maskotka Kosmitek</b> </p>
+                                </li>
+                            </ul>
+                            <p> Moc atrakcji sprawi, że <b style="font-weight: bold"> wszystkie dzieci oddadzą się
+                                    szalonej zabawie, która na długo pozostanie w ich pamięci.</b>
+                            </p>
+                    </div>
+                    <div class="col-sm-4"> <img src="img/kuban events/ANIMACJE/5.jpg" class="d-block w-100"
+                            alt="sala weselna"></div>
+                </div>
+
+
+                <section class="gallery-block compact-gallery">
+                    <div class="container">
+
+                        <div class="row no-gutters">
+                            <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                                <a class="lightbox" href="img/kuban events/ANIMACJE/1.jpg">
+                                    <img class="img-fluid image" src="img/kuban events/ANIMACJE/1.jpg">
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                                <a class="lightbox" href="img/kuban events/ANIMACJE/10.jpg">
+                                    <img class="img-fluid image" src="img/kuban events/ANIMACJE/10.jpg">
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                                <a class="lightbox" href="img/kuban events/ANIMACJE/11.jpg">
+                                    <img class="img-fluid image" src="img/kuban events/ANIMACJE/11.jpg">
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                                <a class="lightbox" href="img/kuban events/ANIMACJE/12.jpg">
+                                    <img class="img-fluid image" src="img/kuban events/ANIMACJE/12.jpg">
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                                <a class="lightbox" href="img/kuban events/ANIMACJE/13.jpg">
+                                    <img class="img-fluid image" src="img/kuban events/ANIMACJE/13.jpg">
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                                <a class="lightbox" href="img/kuban events/ANIMACJE/14.jpg">
+                                    <img class="img-fluid image" src="img//kuban events/ANIMACJE/14.jpg">
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                                <a class="lightbox" href="img/kuban events/ANIMACJE/2.jpg">
+                                    <img class="img-fluid image" src="img/kuban events/ANIMACJE/2.jpg">
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                                <a class="lightbox" href="img/kuban events/ANIMACJE/3.jpg">
+                                    <img class="img-fluid image" src="img/kuban events/ANIMACJE/3.jpg">
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                                <a class="lightbox" href="img/kuban events/ANIMACJE/9.jpg">
+                                    <img class="img-fluid image" src="img/kuban events/ANIMACJE/9.jpg">
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                                <a class="lightbox" href="img/kuban events/ANIMACJE/4.jpg">
+                                    <img class="img-fluid image" src="img/kuban events/ANIMACJE/4.jpg">
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                                <a class="lightbox" href="img/kuban events/ANIMACJE/7.jpg">
+                                    <img class="img-fluid image" src="img/kuban events/ANIMACJE/7.jpg">
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                                <a class="lightbox" href="img/kuban events/ANIMACJE/8.jpg">
+                                    <img class="img-fluid image" src="img/kuban events/ANIMACJE/8.jpg">
+                                </a>
+                            </div>
+
+
+                </section>
+
+                <div class="row" style="margin-top: 5%;">
+                    <div class="col-sm-12">
+                        <h3 style="text-align: right;">Taniec w chmurach </h3>
+                    </div>
+                    <div class="col-sm-8"> <img src="img/kuban events/CIĘŻKI DYM - TANIEC W CHMURACH/1.jpg"
+                            class="d-block w-100" alt="sala weselna"></div>
+                    <div class="col-sm-4" style="margin-top: 8%">
+                        <p>
+                            Pragniecie, aby <b style="font-weight: bold"> Wasz pierwszy taniec był wyjątkowy?</b>
+                            Symbolizuje on <b style="font-weight: bold">początek wspólnej drogi i uroczyście rozpoczyna
+                                przyjęcie weselne.</b>
+                            Oferujmy <b style="font-weight: bold">profesjonalną wytwornicę ciężkiego dymu wraz z
+                                obsługą.</b> Zachwycie swoich gości kłębiącymi się wokół Was<b
+                                style="font-weight: bold"> pięknymi obłokami, które stworzą niezapomniany taniec w
+                                chmurach.</b> Efekt ciężkiego dymu będzie dodatkowym i pięknym uzupełnieniem chwili,
+                            która przeżywa się raz w życiu!
+                        </p>
+                    </div>
+
+                </div>
+                <div class="row" style="margin-top: 5%;">
+                    <div class="col-sm-12">
+                        <h3>Samochód do ślubu </h3>
+                    </div>
+
+                    <div class="col-sm-12" style="margin-top: 5%">
+                        <p><b style="font-weight: bold">Elegancki samochód do ślubu</b> to jeden z tych akcentów, który
+                            <b style="font-weight: bold">uwieczniony na fotografiach ślubnych na zawsze pozostanie w
+                                pamięci wszystkich gości,</b> a jazda nim będzie nadzwyczajną przygodą. <b
+                                style="font-weight: bold">Połączenie elegancji, klasyki i stylu retro </b>pozwala
+                            przenieść się w świat pełen romantyzmu, pamiętnych wrażeń i wzruszeń. </p>
+                    </div>
+
+                </div>
+
+
+                <section class="gallery-block compact-gallery">
+                    <div class="container">
+
+                        <div class="row no-gutters">
+                            <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                                <a class="lightbox" href="img/kuban events/DODGE/1.jpg">
+                                    <img class="img-fluid image" src="img/kuban events/DODGE/1.jpg">
+                                </a>
+                            </div>
+
+                            <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                                <a class="lightbox" href="img/kuban events/DODGE/2.jpg">
+                                    <img class="img-fluid image" src="img/kuban events/DODGE/2.jpg">
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                                <a class="lightbox" href="img/kuban events/DODGE/3.jpg">
+                                    <img class="img-fluid image" src="img/kuban events/DODGE/3.jpg">
+                                </a>
+                            </div>
+
+                        </div>
+
+                </section>
+
+                <h2 style="text-align: center">Nasze dekoracje zapewnią niepowtarzalny charakter imprezy! </h2>
+
+
+                <div class="row" style="margin-top: 5%;">
+                    <div class="col-sm-12">
+                        <h3>Napis Miłość </h3>
+                    </div>
+                    <div class="col-sm-4" style="margin-top: 3%;">
+
+                        <p>Wyjątkowe chwile wymagają wyjątkowej oprawy. Nasz <b style="font-weight: bold"> dekoracyjny
+                                napis Miłość stworzy niesamowity klimat na Waszej uroczystości, </b>a dzięki
+                            zamontowanym żarówkom <b style="font-weight: bold"> doda blasku każdemu zdjęciu.
+                            </b>Wysokość liter to 120 cm.</p> <img src="img/kuban events/NAPIS/2.jpg"
+                            class="d-block w-100" style="margin-top: 15% !important" alt="sala weselna">
+                    </div>
+                    <div class="col-sm-8"> <img src="img/kuban events/NAPIS/1.jpg" class="d-block w-100"
+                            alt="sala weselna"></div>
+                </div>
+                <div class="row" style="margin-top: 5%;">
+                        <div class="col-sm-12">
+                            <h3>Złote podtalerze</h3>
+                        </div>
+                        <div class="col-sm-8" style="margin-top: 8%">
+    
+                            <p>Chcesz zadbać o  <b style="font-weight: bold">każdy szczegół na swoim przyjęciu?</b> Dopilnuj, by nakrycie stołów <b style="font-weight: bold">wyglądało zjawiskowo.</b>
+                                <b style="font-weight: bold"> Nowoczesne i eleganckie talerze dekoracyjne w kolorze złota </b> o średnicy 33 cm to najgrętszy trend, który musisz mieć na swoich stołach. <b style="font-weight: bold"> Jest to oryginalny dodatek do nakrycia,</b>  który sprawi, że stoły będą wyglądać pięknie.
+                                    
+                                </p>
+                        </div>
+                        <div class="col-sm-4"> <img src="img/kuban events/Podtalerze/1.jpg" class="d-block w-100"
+                                alt="sala weselna"></div>
+                    </div>
+
+                    <div class="container-fluid">
+                            <h1 style="text-align:center; margin-top: 8%;">skontaktuj się z nami!</h1>
+                        </div>
+                        <div class="row" style="width:60%; margin: 3% auto;">
+                            <div class="col-sm-6 event">
+                                <div> <img src="img/icons/email.png" style="width: 10%; display:block; margin: 2% auto;"></div>
+                                <h6>
+                                    kubanevents@icloud.com</h6>
+                            </div>
+                            <div class="col-sm-6 event">
+                                <div> <img src="img/icons/smartphone.png" style="width: 10%; display:block; margin: 2% auto;">
+                                </div>
+                                <h4
+                                    style="text-align: center; text-transform: uppercase; color: #fff;  text-transform: uppercase; margin-top:5%">
+                                    604 791 807</h4>
+                            </div>
+                        </div>
+                    <div class="container">
+                       
+                            <a href="http://www.decomania.com.pl/">    <img src="img/inne/decomania.png" class="img-fluid"
+                                style=" max-width: 30%;   margin:0 auto;  display:block;" alt="logo"> ></a>
+                     
+                
+                            <h2 style="text-align: center; margin-top: 3%;">Dekoracje kwiatowe</h2>
+                
+
+                
+                                <div class="row" style="margin-top: 5%;">
+                                    
+                                    <div class="col-sm-4">
+                                        <p><b style="font-weight: bold">Dekorowanie to nasza pasja, </b> którą rozwijamy od wielu lat i nieustannie sprawia nam radość i daje satysfakcję.
+
+                                         Glamour? Vintage? A może preferujesz rustykalizm albo jesteś wielbicielką romantycznego wystroju?     <b style="font-weight: bold"> Mamy doświadczenie w wielu rodzajach aranżacji, z drugiej strony nieustannie otwieramy się na nowe wyzwania i nietuzinkowe pomysły. </b>
+                                                
+                                                Wspólnie przemyślana koncepcja stworzy zamkniętą całość,     <b style="font-weight: bold"> zadabamy o każdy szczegół, udekorujemy salę, w której planowana jest uroczystość, chętnie zajemiemy się również dekoracją kościoła, domu rodzinnego czy samochodu, zamówimy też zaproszenia! </b>
+                                                
+                                                Każda z naszych aranżacji jest tworzona od podstaw, niepowtarzalna, nie stworzymy dwóch identycznych dekoracji. <b style="font-weight: bold">  Chcemy, aby Twój dzień był idealny pod każdym względem. Zaufaj nam, na pewno Cię nie zawiedziemy! </b></p>
+                                    </div>
+                                    <div class="col-sm-8"> <a href="http://www.decomania.com.pl/">  <img src="img/sala weselna/IMG_7361.jpg" class="d-block w-100"
+                                            alt="sala weselna"></a></div>
+                                </div>
+
+                <div class="container-fluid">
+                    <h1 style="text-align:center; margin-top: 8%;">skontaktuj się z nami!</h1>
+                </div>
+                <div class="row" style="width:60%; margin: 3% auto;">
+                    <div class="col-sm-6 event">
+                        <div> <img src="img/icons/email.png" style="width: 10%; display:block; margin: 2% auto;"></div>
+                        <h6>
+                        decomania@decomania.com.pl</h6>
+                    </div>
+                    <div class="col-sm-6 event">
+                        <div> <img src="img/icons/smartphone.png" style="width: 10%; display:block; margin: 2% auto;">
+                        </div>
+                        <h4
+                            style="text-align: center; text-transform: uppercase; color: #fff;  text-transform: uppercase; margin-top:5%">
+                           661 221 710</h4>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- jQuery CDN - Slim version (=without AJAX) -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous">
+            </script>
+            <!-- Popper.JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+                integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+                crossorigin="anonymous">
+            </script>
+            <!-- Bootstrap JS -->
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous">
+            </script>
+            <!-- jQuery Custom Scroller CDN -->
+            <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js">
+            </script>
+            <script src="script.js"></script>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+            <script>
+                baguetteBox.run('.compact-gallery', {
+                    animation: 'slideIn'
+                });
+            </script>
+
+</body>
+
+</html>

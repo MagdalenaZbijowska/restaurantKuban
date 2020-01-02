@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Collapsible sidebar using Bootstrap 4</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Our Custom CSS -->
+  <link rel="stylesheet" href="style3.css">
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+  <!-- Font Awesome JS -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+    integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous">
+  </script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+    integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous">
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Courgette|Merienda&display=swap" rel="stylesheet">
+</head>
+
+<body>
+ 
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+          <div id="dismiss">
+            <i class="fas fa-arrow-left"></i>
+          </div>
+    
+         <div class="sidebar-header">
+            <h2>Menu</h2>
+          </div> 
+    
+          <ul class="list-unstyled components">
+            <!--<p>Dummy Heading</p>-->
+            <li class="active">
+                <img class="icons" src="img/icons/champagne-glass.png" alt="">
+              <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Wesela i imprezy</a>
+              <ul class="collapse list-unstyled" id="homeSubmenu">
+                <li>
+                  <a   href="salweselna.html">Sala weselna</a>
+                </li>
+                <li>
+                  <a  href="salagoralska.html">Sala góralska</a>
+                </li>
+                <li>
+                  <a href="bacówka.html">Bacówka</a>
+                </li>
+                <li>
+                  <a   href="salaklasyczna.html">Sala klasyczna</a>
+                </li>
+                <li>
+                  <a   href="kubanEvents.html">Dekoracje i atrakcje</a>
+                </li>
+                
+              </ul>
+            </li>
+            <li>
+                <img class="icons" src="img/icons/serving-dish.png" alt="">
+              <a href="restauracja.html">Restauracja</a>
+              <img class="icons" src="img/icons/bed.png" alt="">
+              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Hotel</a>
+              <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li>
+                  <a href="hotel.html">Pokoje noclegowe</a>
+                </li>
+                <!-- <li>
+                            <a href="#">Spa</a>
+                        </li>-->
+              </ul>
+            </li>
+            <!--   <li>
+                    <a href="#">Galeria</a>
+                </li>
+                <li>
+                    <a href="#">Kontakt</a>
+                </li>-->
+          </ul>
+      <!--  <a href="http://www.decomania.com.pl/"><img src="/img/inne/decomania.png" style="width:50%; margin-left: 20%;" alt="logo"></a> 
+        <a href="kubanEvents.html"><img src="/img/kuban events/logo/png.png" style="width:50%; margin-left: 20%;" alt="logo"></a> -->
+        <a href="index.html">    <img style="width: 50%; margin-top:5%; margin-left: 20%;" src="img/inne/Logo.png" alt="">
+        </a> 
+      
+      </nav> 
+    
+        <!-- Page Content  -->
+        <div id="content" style="position: fixed; z-index:4;">
+    
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid" style="background-color: #CCB88F; padding: 5%;"
+              style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    
+              <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fas fa-align-left"></i>
+                <span>Menu</span>
+              </button>
+            </div>
+          </nav>
+        </div>
+    
+    
+        <div class="overlay"></div>
+
+    <!--logo-->
+    <img src="img/inne/Logo.png" class="img-fluid logo" alt="logo">
+    <!--carousel-->
+    <span id="example"></span>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+          <div class="preloader" >
+              <img src="img/inne/Logo.png" style="width: 35%; position: absolute; top: 50%;  left: 50%; transform: translate(-50%, -50%)">
+            </div>
+        <div class="carousel-item active">
+          <img src="img/restauracja/karczma1.jpg" class="d-block w-100" style="width: 95%!important;"
+            alt="sala weselna">
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="h1about">restauracja Kuban</h1>
+            <p class="about">tradycyjna polska kuchnia</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <h1 style="text-align:center; margin-top: 8%;">Menu</h1>
+    </div>
+    <div class="row" style="margin-top: 5%;">
+      <div class="col-sm-6"> <img src="img/restauracja/DSC01229.jpg" alt="Nature"
+          style="width:100%; box-shadow: 0 10px 20px 0 rgba(0,0,0,0.30)"></div>
+      <div class="col-sm-6">
+        <h4
+          style="margin-left: 2%; margin-top: 5%; margin-bottom:5%; font-weight: bold; text-transform: uppercase; color: #B2994C;">
+          Przystawki/Sałatki:</h4>
+
+        <table class="table table-borderless" style="font-style: italic;">
+
+          <tbody>
+            <tr>
+              <td>Sałatka „Cezar” z grillowanym kurczakiem</td>
+              <td>240g</td>
+              <td>18 zł</td>
+            </tr>
+            <tr>
+              <td>Serek górski z boczkiem, śliwką i żurawiną </td>
+              <td>200g</td>
+              <td>16zł</td>
+            </tr>
+            <tr>
+              <td>Carpaccio z wołowiny z rukolą i serem twardym</td>
+              <td>100g</td>
+              <td>30 zł</td>
+            </tr>
+            <tr>
+              <td>Duet śledziowy</td>
+              <td>200g</td>
+              <td>15 zł</td>
+            </tr>
+            <tr>
+              <td>Sałatka wegetarańska</td>
+              <td>240g</td>
+              <td>18 zł</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 5%;">
+
+      <div class="col-sm-6">
+        <h4
+          style="margin-left: 2%; margin-top: 5%; margin-bottom:5%; font-weight: bold; text-transform: uppercase; color: #B2994C;">
+         Dla dzieci:</h4>
+
+        <table class="table table-borderless" style="font-style: italic;">
+
+          <tbody>
+            <tr>
+              <td>Fileciki z kurczaka w chrupiącej panierce, frytki, surówka z marchewki</td>
+              <td>100g/80g/50g </td>
+              <td>15 zł</td>
+            </tr>
+ 
+
+          </tbody>
+        </table>
+        <h4
+          style="margin-left: 2%; margin-top: 5%; margin-bottom:5%; font-weight: bold; text-transform: uppercase; color: #B2994C;">
+          Zupy:</h4>
+
+        <table class="table table-borderless" style="font-style: italic;">
+
+          <tbody>
+            <tr>
+              <td>Rosół drobiowo-wołowy z makaronem</td>
+              <td>250ml/60g</td>
+              <td>9 zł</td>
+            </tr>
+            <tr>
+              <td>Żurek z jajkiem</td>
+              <td>300 ml</td>
+              <td>12 zł</td>
+            </tr>
+            <tr>
+              <td>Zupa z maślaków z łazankami</td>
+              <td>250ml</td>
+              <td>15 zł</td>
+            </tr>
+            
+
+          </tbody>
+        </table>
+
+      </div>
+      <div class="col-sm-6"> <img src="img/inne/child.jpg" alt="Nature"
+          style="width:100%; box-shadow: 0 10px 20px 0 rgba(0,0,0,0.30)"></div>
+    </div>
+    <div class="row" style="margin-top: 5%;">
+      <div class="col-sm-6"> <img src="img/restauracja/DSC01974.jpg" alt="Nature"
+          style="width:100%; box-shadow: 0 10px 20px 0 rgba(0,0,0,0.30)"></div>
+      <div class="col-sm-6">
+        <h4
+          style="margin-left: 2%; margin-top: 5%; margin-bottom:5%; font-weight: bold; text-transform: uppercase; color: #B2994C;">
+          Dania z wieprzowiny:</h4>
+
+        <table class="table table-borderless" style="font-style: italic;">
+
+          <tbody>
+            <tr>
+              <td>Kotlet schabowy z jajkiem, ziemniakami i kapustą zasmażaną</td>
+              <td>150g/150g/150g</td>
+              <td>28 zł</td>
+            </tr>
+            <tr>
+              <td>Rolada wieprzowa z sosem, kluskami i czerwoną kapustą</td>
+              <td>130g/150g/150g</td>
+              <td>30 zł</td>
+            </tr>
+            <tr>
+              <td>Golonka gotowana z warzywami, ziemniaki i kapusta zasmażana</td>
+              <td>350g-500g/150g/150g</td>
+              <td>36 zł</td>
+            </tr>
+            <tr>
+              <td>Polędwiczki na sosie grzybowym z kluskami i bukietem warzyw</td>
+              <td> 150g/150g/150g</td>
+              <td>36 zł</td>
+            </tr>
+            <tr>
+              <td>Schab z kością z okrywą tłuszczową, frytki, duet surówek</td>
+              <td> 250g/150g/180g</td>
+              <td>36 zł</td>
+            </tr>
+            <tr>
+                <td>Żeberka pieczone, surówka z białej kapusty, ziemniaki opiekane</td>
+                <td> 350g/150g/150g</td>
+                <td>36 zł</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 5%;">
+
+      <div class="col-sm-6">
+        <h4
+          style="margin-left: 2%; margin-top: 5%; margin-bottom:5%; font-weight: bold; text-transform: uppercase; color:  #B2994C;">
+          Koryto duże (dla sześciu osób): </h4>
+
+        <p style="margin-left: 3%; font-style:italic;">Rosół drobiowo-wołowy z makaronem,
+          10 sztuk mięsa: 1x golonka gotowana, 1x schab z kością z okrywą tłuszczową,                   1x rolada wołowa, 1x rolada wieprzowa, 1x filet z kurczaka zapiekany z pomidorami i mozzarelllą, 2x kotlet ‘de volaille’, 2x udko z kaczki, 1x żeberka pieczone, pierogi miks ruskie i mięsne (6szt.);
+          ziemniaki, kluski śląskie, frytki, modra kapusta, kapusta zasmażana, zestaw surówek, sos pieczeniowy.
+          </p>
+        <p style="margin-left: 3%; font-style:italic;">Cena: 260 zł</p>
+        <h4
+          style="margin-left: 2%; margin-top: 5%; margin-bottom:5%; font-weight: bold; text-transform: uppercase; color: #B2994C;">
+          Koryto małe (dla trzech osób): </h4>
+
+        <p style="margin-left: 3%; font-style:italic;">Rosół drobiowo-wołowy z makaronem,
+          5 sztuk mięsa: 1x golonka gotowana, 1x rolada wołowa, 1x schab z kością z okrywą tłuszczową, 1x kotlet ‘de volaille’, 1x udko z kaczki, pierogi z mięsem (4 szt.);
+          ziemniaki, kluski śląskie, frytki, modra kapusta, zestaw surówek, sos pieczeniowy.
+          </p>
+        <p style="margin-left: 3%; font-style:italic;">Cena: 160 zł</p>
+
+
+      </div>
+      <div class="col-sm-6"> <img src="img/restauracja/DSC01976.jpg" alt="Nature"
+          style="width:100%; box-shadow: 0 10px 20px 0 rgba(0,0,0,0.30)"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6"> <img src="img/restauracja/DSC01984.jpg" alt="Nature"
+          style="width:100%; box-shadow: 0 10px 20px 0 rgba(0,0,0,0.30)"></div>
+      <div class="col-sm-6">
+        <h4
+          style="margin-left: 2%; margin-top: 5%; margin-bottom:5%; font-weight: bold; text-transform: uppercase; color: #B2994C;">
+          Dania z drobiu:</h4>
+
+        <table class="table table-borderless" style="font-style: italic;">
+
+          <tbody>
+            <tr>
+              <td>Kotlet de volaille z frytkami i surówką z białej kapusty</td>
+              <td>160g/150g/150g</td>
+              <td>28 zł</td>
+            </tr>
+            <tr>
+              <td>Pieczone udko z kaczki w sosie śliwkowym, kluski śląskie, modra kapusta</td>
+              <td>150g/150g/150g</td>
+              <td>30 zł</td>
+            </tr>
+            <tr>
+              <td>Filet z kurczaka zapiekany z pomidorami i mozzarellą, frytki, surówki</td>
+              <td> 150g/150g/150g</td>
+              <td>28 zł</td>
+            </tr>
+          </tbody>
+
+        </table>
+        <h4
+          style="margin-left: 2%; margin-top: 5%; margin-bottom:5%; font-weight: bold; text-transform: uppercase; color: #B2994C;">
+          Dania z wołowiny:</h4>
+
+        <table class="table table-borderless" style="font-style: italic;">
+
+          <tbody>
+            <tr>
+              <td>Rolada wołowa w sosie własnym z kluskami i modrą kapustą</td>
+              <td>150g/150g/150g</td>
+              <td>34 zł</td>
+            </tr>
+            <tr>
+              <td>Policzki wołowe w sosie cebulowym z kluskami i buraczkami</td>
+              <td>150g/150g/150g</td>
+              <td>34 zł</td>
+            </tr>
+            <tr>
+              <td>Ozór wołowy w sosie chrzanowym, ziemniaki, surówka z białej kapusty</td>
+              <td>150g/150g/150g</td>
+              <td>28 zł</td>
+            </tr>
+
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+
+
+    <div class="row">
+
+      <div class="col-sm-6">
+        <h4
+          style="margin-left: 2%; margin-top: 5%; margin-bottom:5%; font-weight: bold; text-transform: uppercase; color:  #B2994C;">
+          Dania z ryb:</h4>
+
+        <table class="table table-borderless" style="font-style: italic">
+
+          <tbody>
+            <tr>
+              <td>Łosoś z grilla</td>
+              <td>wg/wagi </td>
+              <td>15 zł/ 100g</td>
+            </tr>
+            <tr>
+              <td>Pstrąg z patelni</td>
+              <td>wg/wagi</td>
+              <td>12 zł/100g</td>
+            </tr>
+
+          </tbody>
+        </table>
+        <h4
+          style="margin-left: 2%; margin-top: 5%; margin-bottom:5%; font-weight: bold; text-transform: uppercase; color: #B2994C;">
+          Dodatki do ryb:</h4>
+
+        <table class="table table-borderless" style="font-style: italic;">
+
+          <tbody>
+            <tr>
+              <td>Ziemniaki</td>
+              <td>150g</td>
+              <td>6 zł</td>
+            </tr>
+            <tr>
+              <td>Frytki</td>
+              <td>150g</td>
+              <td>7 zł</td>
+            </tr>
+            <tr>
+              <td>Duet surówek</td>
+              <td>180g</td>
+              <td>8 zł</td>
+            </tr>
+            <tr>
+                <td>Warzywa gotowane</td>
+                <td>150g</td>
+                <td>8 zł</td>
+              </tr>
+   
+
+
+          </tbody>
+        </table>
+
+      </div>
+      <div class="col-sm-6"> <img src="img/inne/chopping-board-cuisine-delicious-428355.jpg" alt="Nature"
+          style="width:100%; box-shadow: 0 10px 20px 0 rgba(0,0,0,0.30)"></div>
+    </div>
+
+    <div class="row" style="margin-top: 5%;">
+      <div class="col-sm-6"> <img src="img/inne/bakery-baking-cake-6981.jpg" alt="Nature"
+          style="width:100%; box-shadow: 0 10px 20px 0 rgba(0,0,0,0.30)"></div>
+      <div class="col-sm-6">
+        <h4
+          style="margin-left: 2%; margin-top: 5%; margin-bottom:5%; font-weight: bold; text-transform: uppercase; color:  #B2994C;">
+          Dania mączne:</h4>
+
+        <table class="table table-borderless" style="font-style: italic;">
+
+          <tbody>
+            <tr>
+              <td>Placki ziemniaczane z gulaszem wieprzowym </td>
+              <td>300g</td>
+              <td>25 zł</td>
+            </tr>
+            <tr>
+              <td>Placki ziemniaczane z sosem grzybowym  </td>
+              <td>300g</td>
+              <td>20 zł</td>
+            </tr>
+              <td>Pierogi z mięsem okraszane boczkiem i cebulką</td>
+              <td>8szt/20g/20g</td>
+              <td>18 zł</td>
+            </tr>
+            <tr>
+              <td>Pierogi ruskie z cebulką </td>
+              <td>8szt/20g/20g</td>
+              <td>18 zł</td>
+            </tr>
+          </tbody>
+
+        </table>
+        <h4
+          style="margin-left: 2%; margin-top: 5%; margin-bottom:5%; font-weight: bold; text-transform: uppercase; color: #B2994C;">
+          Desery:</h4>
+
+        <table class="table table-borderless" style="font-style: italic;">
+
+          <tbody>
+            <tr>
+              <td>Suflet czekoladowy z sosem brzoskwiniowo-pomarańczowym i śmietaną</td>
+              <td>140g</td>
+              <td>15 zł</td>
+            </tr>
+            <tr>
+              <td>Lody z chrupiącą posypką karmelowo-czekoladową</td>
+              <td>150g</td>
+              <td>14 zł</td>
+            </tr>
+            <tr>
+              <td>Szarlotka na ciepło z gałką lodów waniliowych</td>
+              <td>160g</td>
+              <td>14 zł</td>
+            </tr>
+            <tr>
+              <td>Sernik</td>
+              <td>150g</td>
+              <td>15 zł</td>
+            </tr>
+
+            
+
+          </tbody>
+
+        </table>
+        
+      </div>
+    </div>
+    <div class="row" style="margin-top: 2%; margin-bottom: 5%;">
+        <div class="col-sm-6">
+          <h4
+            style="margin-left: 2%; margin-top: 0; margin-bottom:5%; font-weight: bold; text-transform: uppercase; color: #B2994C;">
+          Dodatki:</h4>
+  
+          <table class="table table-borderless" style="font-style: italic;">
+  
+              <tbody>
+                  <tr>
+                    <td>Ziemniaki</td>
+                    <td>150g</td>
+                    <td>6 zł</td>
+                  </tr>
+                  <tr>
+                      <td>Kluski</td>
+                      <td>150g</td>
+                      <td>7 zł</td>
+                    </tr>
+                  <tr>
+                    <td>Frytki</td>
+                    <td>150g</td>
+                    <td>7 zł</td>
+                  </tr>
+
+                  <tr>
+                      <td>Bukiet warzyw gotowanych</td>
+                      <td>150g</td>
+                      <td>8 zł</td>
+                    </tr>
+
+                      <tr>
+                          <td>Modra kapusta</td>
+                          <td>150g</td>
+                          <td>8 zł</td>
+                        </tr>
+                  <tr>
+                    <td>Duet surówek</td>
+                    <td>180g</td>
+                    <td>8 zł</td>
+                  </tr>
+                  <tr>
+
+                  <tr>
+                      <td>Surówka z marchewki</td>
+                      <td>150g</td>
+                      <td>6 zł</td>
+                    </tr>
+                    <tr>
+                        <td>Surówka z białej kapusty</td>
+                        <td>150g</td>
+                        <td>5 zł</td>
+                      </tr>
+                      <tr>
+                          <td>Kapusta zasmażana</td>
+                          <td>150g</td>
+                          <td>8 zł</td>
+                        </tr>
+                        <tr>
+                          <td>Sos pieczeniowy</td>
+                          <td>100ml</td>
+                          <td>3 zł</td>
+                        </tr>
+                        <tr>
+                          <td>Sos grzybowy</td>
+                          <td>100ml</td>
+                          <td>4 zł</td>
+                        </tr>
+                        <tr>
+                          <td>Porcja chleba</td>
+                          <td>65g</td>
+                          <td>2 zł</td>
+                        </tr>
+      
+      
+                </tbody>
+          </table>
+  
+        </div>
+        <div class="col-sm-6"> <img src="img/inne/cuisine-2248567_1280.jpg" alt="Nature"
+            style="width:100%; box-shadow: 0 10px 20px 0 rgba(0,0,0,0.30)"></div>
+      </div>
+  <!--contact-->
+  <div class="container-fluid">
+      <h1 style="text-align:center">zarezerwuj stolik</h1>
+    </div>
+    <div class="row" style="width:60%; margin: 3% auto;">
+      <div class="col-sm-6 event">
+        <div> <img src="img/icons/email.png" style="width: 10%; display:block; margin: 2% auto;"></div>
+        <h6>
+          karczma@karczmakuban.pl</h6>
+      </div>
+      <div class="col-sm-6 event">
+        <div> <img src="img/icons/smartphone.png" style="width: 10%; display:block; margin: 2% auto;"></div>
+        <h4
+          style="text-align: center; text-transform: uppercase; color: #fff;  text-transform: uppercase; margin-top:5%">
+          32 442 04 15</h4>
+      </div>
+    </div>
+<!--footer-->
+<div class="row footer">
+    <div class="col-sm-4">
+        <a href="index.html">  <img src="img/inne/Logo.png" class="img-fluid footerlogo" alt="logo"></a>
+    </div>
+    <div class="col-sm-4" style="margin-top: 5%;">
+        <p class="footermenu"><a href="index.html">1. strona główna</a>
+          <p class="footermenu"><a href="hotel.html">2. hotel</a></p>
+          <p class="footermenu"><a href="salweselna.html">3. sala weselna</a></p>
+          <p class="footermenu"><a href="restauracja.html">4. restauracja</a></p>
+          <p class="footermenu"><a href="bacówka.html">5. bacówka</a></p>
+          <p class="footermenu"><a href="salaklasyczna.html">6. sala klasyczna</a></p>
+          <p class="footermenu"><a href="salagoralska.html">7. sala góralska</a></p>
+    </div>
+    <div class="col-sm-4">
+      <p style="margin-top: 10%; font-weight: bold; font-size: 1rem; margin-left: 5%">Karczma Kuban</p>
+      <p style="margin: 0; font-size: 1rem; margin-left: 5%">ul. Spokojna 72</p>
+      <p style="margin: 0; font-size: 1rem; margin-left: 5%">43-230 Goczałkowice-Zdrój</p>
+      <p style="margin: 0; font-size: 1rem; margin-left: 5%">tel. 32 442 04 10</p>
+      <p style="margin: 0; font-size: 1rem; margin-left: 5%">e-mail. karczma@karczmakuban.pl</p>
+      <a href="https://pl-pl.facebook.com/karczmakuban/"><img src="img/icons/facebook.png" class="img-fluid"
+          alt="logo" style="width: 10%;margin-top: 10%; margin-left: 5%"></a>
+    </div>
+  </div>
+  </div>
+  <!-- jQuery CDN - Slim version (=without AJAX) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <!-- Popper.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+    integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
+  </script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <!-- jQuery Custom Scroller CDN -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js">
+  </script>
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>

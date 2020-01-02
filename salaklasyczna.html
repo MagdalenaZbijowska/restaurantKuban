@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
+
+
+  <title>Collapsible sidebar using Bootstrap 4</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Our Custom CSS -->
+  <link rel="stylesheet" href="style3.css">
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+
+  <!-- Font Awesome JS -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+    integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous">
+  </script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+    integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous">
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Courgette|Merienda&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+</head>
+
+<body>
+ 
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+          <div id="dismiss">
+            <i class="fas fa-arrow-left"></i>
+          </div>
+    
+         <div class="sidebar-header">
+            <h2>Menu</h2>
+          </div> 
+    
+          <ul class="list-unstyled components">
+            <!--<p>Dummy Heading</p>-->
+            <li class="active">
+                <img class="icons" src="img/icons/champagne-glass.png" alt="">
+              <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Wesela i imprezy</a>
+              <ul class="collapse list-unstyled" id="homeSubmenu">
+                <li>
+                  <a   href="salweselna.html">Sala weselna</a>
+                </li>
+                <li>
+                  <a  href="salagoralska.html">Sala góralska</a>
+                </li>
+                <li>
+                  <a href="bacówka.html">Bacówka</a>
+                </li>
+                <li>
+                  <a   href="salaklasyczna.html">Sala klasyczna</a>
+                </li>
+                <li>
+                  <a   href="kubanEvents.html">Dekoracje i atrakcje</a>
+                </li>
+                
+              </ul>
+            </li>
+            <li>
+                <img class="icons" src="img/icons/serving-dish.png" alt="">
+              <a href="restauracja.html">Restauracja</a>
+              <img class="icons" src="img/icons/bed.png" alt="">
+              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Hotel</a>
+              <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li>
+                  <a href="hotel.html">Pokoje noclegowe</a>
+                </li>
+                <!-- <li>
+                            <a href="#">Spa</a>
+                        </li>-->
+              </ul>
+            </li>
+            <!--   <li>
+                    <a href="#">Galeria</a>
+                </li>
+                <li>
+                    <a href="#">Kontakt</a>
+                </li>-->
+          </ul>
+      <!--  <a href="http://www.decomania.com.pl/"><img src="/img/inne/decomania.png" style="width:50%; margin-left: 20%;" alt="logo"></a> 
+        <a href="kubanEvents.html"><img src="/img/kuban events/logo/png.png" style="width:50%; margin-left: 20%;" alt="logo"></a> -->
+        <a href="index.html">    <img style="width: 50%; margin-top:5%; margin-left: 20%;" src="img/inne/Logo.png" alt="">
+        </a> 
+      
+      </nav> 
+    
+        <!-- Page Content  -->
+        <div id="content" style="position: fixed; z-index:4;">
+    
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid" style="background-color: #CCB88F; padding: 5%;"
+              style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    
+              <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fas fa-align-left"></i>
+                <span>Menu</span>
+              </button>
+            </div>
+          </nav>
+        </div>
+    
+    
+        <div class="overlay"></div>
+
+    <!--logo-->
+    <img src="img/inne/Logo.png" class="img-fluid logo" alt="logo">
+    <!--carousel-->
+    <span id="example"></span>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+          <div class="preloader" >
+              <img src="img/inne/Logo.png" style="width: 35%; position: absolute; top: 50%;  left: 50%; transform: translate(-50%, -50%)">
+            </div>
+        <div class="carousel-item active">
+          <img src="img/sala konferencyjna/911A7795 (Copy) — kopia.jpg" class="d-block w-100"
+            style="width: 95%!important;" alt="sala weselna">
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="h1about">sala klasyczna</h1>
+            <p class="about">klasyka to zawsze najlepszy wybór</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-fluid">
+      <img src="img/inne/Logo.png" style="z-index: 4; display: block; margin: 0 auto; width: 8%" alt="logo">
+      <h1 style="text-align:center; margin-top: 2%;" class="scrollreveal">Sala klasyczna</h1>
+      <h3 style="text-align:center; font-style: italic; margin-top: 2%; color:  #B2994C;" class="scrollreveal1">
+        konferencje, szkolenia,
+        imprezy okolicznościowe</h2>
+        <div style="margin-left:15%; margin-top:5%; margin-right: 15%;">
+          <p class="scrollreveal2">Najlepszy wybór na organizację <b style="font-weight: bold">szkolenia i
+              konferencji. </b>Sala jest wyposażona w wbudowany <b style="font-weight: bold">ekran i rzutnik, </b>do
+            dyspozycji uczestników jest również flipchart, sala ma również <b style="font-weight: bold">wbudowane
+              nagłośnienie. </b></p>
+          <p class="scrollreveal3">Sala jest przestronna, proponujemy kinowe ustawienie krzeseł lub wspólny stół
+            dla słuchaczy. <b style="font-weight: bold">Proponowana dla grup od 10- 70 osób.</b></p>
+          <p class="scrollreveal4">Sala klasyczna w innej aranżacji jest idealna na <b style="font-weight: bold">imprezy
+              okolicznościowe i firmowe. </b>Dla gości przygotowujemy wspólny stół
+            oraz <b style="font-weight: bold">miejsce do tańczenia, </b>jest też <b style="font-weight: bold">osobny
+              ogródek. Sala jest klimatyzowana.</b></p>
+          <p class="scrollreveal5"><b style="font-weight: bold">Zapraszamy!</b></p>
+        </div>
+    </div>
+
+
+    <section class="gallery-block compact-gallery">
+      <div class="container">
+        <div class="heading">
+          <h1 class="scrollreveal6">Galeria</h1>
+        </div>
+        <div class="row no-gutters scrollreveal7">
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <a class="lightbox" href="img/sala konferencyjna/911A7804 (Copy).jpg">
+              <img class="img-fluid image" src="img/sala konferencyjna/911A7804 (Copy).jpg">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <a class="lightbox" href="img/sala konferencyjna/IMG_20190722_082905 (Copy).jpg">
+              <img class="img-fluid image" src="img/sala konferencyjna/IMG_20190722_082905 (Copy).jpg">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <a class="lightbox" href="img/sala konferencyjna/IMG_20190722_082917 (Copy).jpg">
+              <img class="img-fluid image" src="img/sala konferencyjna/IMG_20190722_082917 (Copy).jpg">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <a class="lightbox" href="img/sala konferencyjna/IMG_20190911_161603.jpg">
+              <img class="img-fluid image" src="img/sala konferencyjna/IMG_20190911_161603.jpg">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <a class="lightbox" href="img/sala konferencyjna/IMG_20190911_161611.jpg">
+              <img class="img-fluid image" src="img/sala konferencyjna/IMG_20190911_161611.jpg">
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <a class="lightbox" href="img/sala konferencyjna/IMG_20190911_161619.jpg">
+              <img class="img-fluid image" src="img/sala konferencyjna/IMG_20190911_161619.jpg">
+            </a>
+          </div>
+        </div>
+
+    </section>
+    <!--contact-->
+    <div class="container-fluid">
+        <h1 style="text-align:center">zarezerwuj salę</h1>
+      </div>
+      <div class="row" style="width:60%; margin: 3% auto;">
+        <div class="col-sm-6 event">
+          <div> <img src="img/icons/email.png" style="width: 10%; display:block; margin: 2% auto;"></div>
+          <h6>
+            marketing@karczmakuban.pl</h6>
+        </div>
+        <div class="col-sm-6 event">
+          <div> <img src="img/icons/smartphone.png" style="width: 10%; display:block; margin: 2% auto;"></div>
+          <h4
+            style="text-align: center; text-transform: uppercase; color: #fff;  text-transform: uppercase; margin-top:5%">
+            605 461 000</h4>
+        </div>
+      </div>
+   <!--footer-->
+   <div class="row footer">
+    <div class="col-sm-4">
+        <a href="index.html">  <img src="img/inne/Logo.png" class="img-fluid footerlogo" alt="logo"></a>
+    </div>
+    <div class="col-sm-4" style="margin-top: 5%;">
+        <p class="footermenu"><a href="index.html">1. strona główna</a>
+          <p class="footermenu"><a href="hotel.html">2. hotel</a></p>
+          <p class="footermenu"><a href="salweselna.html">3. sala weselna</a></p>
+          <p class="footermenu"><a href="restauracja.html">4. restauracja</a></p>
+          <p class="footermenu"><a href="bacówka.html">5. bacówka</a></p>
+          <p class="footermenu"><a href="salaklasyczna.html">6. sala klasyczna</a></p>
+          <p class="footermenu"><a href="salagoralska.html">7. sala góralska</a></p>
+    </div>
+    <div class="col-sm-4">
+      <p style="margin-top: 10%; font-weight: bold; font-size: 1rem; margin-left: 5%">Karczma Kuban</p>
+      <p style="margin: 0; font-size: 1rem; margin-left: 5%">ul. Spokojna 72</p>
+      <p style="margin: 0; font-size: 1rem; margin-left: 5%">43-230 Goczałkowice-Zdrój</p>
+      <p style="margin: 0; font-size: 1rem; margin-left: 5%">tel. 32 442 04 10</p>
+      <p style="margin: 0; font-size: 1rem; margin-left: 5%">e-mail. karczma@karczmakuban.pl</p>
+      <a href="https://pl-pl.facebook.com/karczmakuban/"><img src="img/icons/facebook.png" class="img-fluid"
+          alt="logo" style="width: 10%;margin-top: 10%; margin-left: 5%"></a>
+    </div>
+  </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+      integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js">
+    </script>
+    <script src="script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script>
+      baguetteBox.run('.compact-gallery', {
+        animation: 'slideIn'
+      });
+    </script>
+
+
+
+</body>
+
+</html>

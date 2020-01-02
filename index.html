@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
+
+
+  <title>Karczma Kuban</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Our Custom CSS -->
+  <link rel="stylesheet" href="style3.css">
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+
+  <!-- Font Awesome JS -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+    integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous">
+  </script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+    integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous">
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Courgette|Hammersmith+One|Merienda&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+</head>
+
+<body>
+
+ 
+<div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+      <div id="dismiss">
+        <i class="fas fa-arrow-left"></i>
+      </div>
+
+     <div class="sidebar-header">
+        <h2>Menu</h2>
+      </div> 
+
+      <ul class="list-unstyled components">
+        <!--<p>Dummy Heading</p>-->
+        <li class="active">
+            <img class="icons" src="img/icons/champagne-glass.png" alt="">
+          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Wesela i imprezy</a>
+          <ul class="collapse list-unstyled" id="homeSubmenu">
+            <li>
+              <a   href="salweselna.html">Sala weselna</a>
+            </li>
+            <li>
+              <a  href="salagoralska.html">Sala góralska</a>
+            </li>
+            <li>
+              <a href="bacówka.html">Bacówka</a>
+            </li>
+            <li>
+              <a   href="salaklasyczna.html">Sala klasyczna</a>
+            </li>
+            <li>
+              <a   href="kubanEvents.html">Dekoracje i atrakcje</a>
+            </li>
+            
+          </ul>
+        </li>
+        <li>
+            <img class="icons" src="img/icons/serving-dish.png" alt="">
+          <a href="restauracja.html">Restauracja</a>
+          <img class="icons" src="img/icons/bed.png" alt="">
+          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Hotel</a>
+          <ul class="collapse list-unstyled" id="pageSubmenu">
+            <li>
+              <a href="hotel.html">Pokoje noclegowe</a>
+            </li>
+            <!-- <li>
+                        <a href="#">Spa</a>
+                    </li>-->
+          </ul>
+        </li>
+        <!--   <li>
+                <a href="#">Galeria</a>
+            </li>
+            <li>
+                <a href="#">Kontakt</a>
+            </li>-->
+      </ul>
+  <!--  <a href="http://www.decomania.com.pl/"><img src="/img/inne/decomania.png" style="width:50%; margin-left: 20%;" alt="logo"></a> 
+    <a href="kubanEvents.html"><img src="/img/kuban events/logo/png.png" style="width:50%; margin-left: 20%;" alt="logo"></a> -->
+    <img style="width: 50%; margin-top:5%; margin-left: 20%;" src="img/inne/Logo.png" alt="">
+  
+  </nav> 
+
+    <!-- Page Content  -->
+    <div id="content" style="position: fixed; z-index:4;">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid" style="background-color: #CCB88F; padding: 5%;"
+          style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+          <button type="button" id="sidebarCollapse" class="btn btn-info">
+            <i class="fas fa-align-left"></i>
+            <span>Menu</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+
+    <div class="overlay"></div>
+
+    <!--logo-->
+    <img src="img/inne/Logo.png" class="img-fluid logo" alt="logo">
+    <!--carousel-->
+    <span id="example"></span>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+          <div class="preloader" >
+              <img src="img/inne/Logo.png" style="width: 35%; position: absolute; top: 50%;  left: 50%; transform: translate(-50%, -50%)">
+            </div>
+        <div class="carousel-item active">
+          <img src="img/sala weselna/IMG_7356 — kopia.jpg" class="d-block w-100" style="width: 95%!important;"
+            alt="sala weselna"> 
+     <div class="carousel-caption d-none d-md-block" >  <div class="back"> 
+         <h1 style="font-size: 4em; color: #B2994C; ">sala weselna</h1> </div>
+            <p class="about">idealna na wesele od 100 do 250 osób</p>
+            <button class="btnabout"><a href="salweselna.html">czytaj więcej</a></button>
+        </div>
+       
+      </div>  
+        <div class="carousel-item">
+          <img src="img/restauracja/karczma1.jpg" class="d-block w-100" style="width: 95%!important;" alt="karczma">
+          <div class="carousel-caption d-none d-md-block"><div class="back"> 
+            <h1 style="font-size: 4em; color: #B2994C;">restauracja kuban</h1></div>
+            <p class="about">tradycyjna polska kuchnia</p>
+            <button class="btnabout"><a href="restauracja.html">czytaj więcej</a></button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/hotel//911A7781 — kopia.jpg" class="d-block w-100" style="width: 95%!important;" alt="hotel">
+          <div class="carousel-caption d-none d-md-block"><div class="back"> 
+            <h1 style="font-size: 4em; color: #B2994C;">hotel** kuban</h1></div>
+            <p class="about">komfort w przystępnej cenie</p>
+            <button class="btnabout"><a href="hotel.html">czytaj więcej</a></button>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+ <!-- <span id="news"></span>
+
+    <div class="container-fluid bcgimage3" style=" width: 95%!important; padding: 10%; margin-top:4%;">
+      <div class="container-fluid opacity" style="margin-left:45%" ;>
+        <h1 style="text-align:center; margin-top: 2%; color: rgb(66, 64, 64);">Wesołych Świąt!</h1>
+        <h3 style="text-align:center; font-style: italic; margin-top: 2%; color:  #B2994C ;">i szczęśliwego Nowego Roku!</h2>
+          <div style="margin-left:10%; margin-top:5%; margin-right: 10%; color: rgb(66, 64, 64)">
+            <p style="text-align: center">Informujemy, że  dniach <b style="font-weight: bold">24, 25 i 26 grudnia Karczma Kuban będzie nieczynna.</b></p>
+            <p style="text-align: center">Życzymy Państwu <b style="font-weight: bold">spokojnych, radosnych i rodzinnych Świąt Bożego Narodzenia</b> oraz
+ <b style="font-weight: bold">wszelkiej pomyślności w nadchodzącym Nowym Roku!</b> </p>
+            <p style="text-align: center">Właściciel i pracownicy Karczmy Kuban</p>
+          </div>
+       
+
+      </div>
+    -->  
+    <span id="example2"></span>
+    <div class="container-fluid bcgimage scrollreveal2" style="padding-top:2%; padding-bottom: 2%; margin-top: 1.2%;">
+      <div class="container-fluid opacity" style="margin-left:50%;">
+               <h1 style="text-align:center; margin-top: 2%;">Karczma Kuban</h1>
+        <h3 style="text-align:center; font-style: italic; margin-top: 2%; color: #B2994C;">wybierz wyjątkowe miejsce
+          </h2>
+          <p style="margin-top: 5%;">
+            <p style="text-align: center">Karczma Kuban znajduje się na pograniczu <b style="font-weight: bold">Pszczyny
+                i
+                Goczałkowic-Zdroju</b> i jest
+              zlokalizowana przy trasie <b style="font-weight: bold"></b>Katowice: Bielsko-Biała, dojazd do Karczmy jest
+              wyjątkowo dogodny. Przy hotelu
+              jest <b style="font-weight: bold">prywatny, bezpłatny i duży parking dla Gości.</b></p>
+            <p style="text-align: center">Hotel** Kuban oferuje <b style="font-weight: bold">nowoczesne i zadbane
+                pokoje</b>, w których może przebywać
+              równocześnie <b style="font-weight: bold">ponad 40 Gości.</b></p>
+            <p style="text-align: center">W restauracji Kuban proponujemy <b style="font-weight: bold">swojskie specjały
+                polskiej kuchni</b>, a nasi
+              kucharze zapewniają, że <b style="font-weight: bold">Goście wyjdą z Karczmy syci.</b></p>
+            <p style="text-align: center">Sala weselna Kuban jest <b style="font-weight: bold">jedną z największych na
+                Śląsku! </b>Zapraszamy do
+              <b style="font-weight: bold">organizacji wesel od 100 do 250 osób. Klasyczny styl i niesamowity wystrój na
+                pewno spełni oczekiwania
+                najbardziej wymagających Gości.</b></p>
+          </p>
+      </div>
+    </div>
+    <span id="example3"></span>
+    <div class="container-fluid">
+      <h1 style="text-align:center; margin-top: 2%;">Pokoje noclegowe</h1>
+      <h3 style="text-align:center; font-style: italic; margin-top: 2%; color: #B2994C;">wybierz komfort</h2>
+    </div>
+
+
+
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner" >
+        <div class="carousel-item active">
+          <img class="d-block w-100" style="position: relative; width: 80%!important;"
+            src="img/hotel/911A7770 (Copy) — kopia.jpg" alt="First slide">
+          <div class="room"
+            style="width: 30%; height: 70%; position: absolute; margin-top: -40%;  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.30); margin-left: 5%; z-index: 8!important; background-color: #fff;">
+            <h1 style="text-align: center; margin-top: 5%; color:#B2994C;">Standard</h1>
+            <p style="text-align: center; margin: 10%">W pokoju standard są 2 pojedyńcze łóżka, łazienka, telewizor i
+              biurko. Pokój jest klimatyzowany. W Pokoju jst WiFi.</p> <p style="text-align: center; margin: 10%">Hotel oferuje pokoje w cenach od 120,00 zł do 140,00 zł/ pokój.</p>
+            <img src="img/icons/bed.png" style="width: 20%; display:block; margin: 0 auto;">
+          <!--   <button class="btnabout" style="display: block; margin: 5% auto;"><a href="hotel.html">czytaj
+                więcej</a></button>-->  
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" style="width: 80%!important;" src="img/hotel/911A7791 — kopia (2).jpg"
+            alt="Second slide">
+          <div class="room"
+            style="width: 30%; height: 70%; position: absolute; margin-top: -40%;  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.30); margin-left: 5%; z-index: 8!important; background-color: #fff;">
+            <h1 style="text-align: center; margin: 5%; color: #B2994C;">Superior</h1>
+            <p style="text-align: center; margin: 10%">W pokoju superior jest łóżko małżeńskie, komplet wypoczynkowy,
+              stół, telewizor i biurko. W Pokoju jst WiFi. Pokój jest klimatyzowany. W pokoju jest łazienka.</p><p style="text-align: center; margin: 10%">Hotel oferuje pokoje w cenie 150,00 zł/ pokój.</p>
+            <img src="img/icons/dbed.png" style="width: 20%; display:block; margin: 0 auto;">
+       <!--   <button class="btnabout" style="display: block; margin: 5% auto;"><a href="hotel.html">czytaj
+                więcej</a></button>-->  
+          </div>
+        </div>
+
+      </div>
+      <a class="carousel-control-prev" style="left: 10% !important" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" style="right: 10% !important" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+
+    <span id="example4"></span>
+    <div class="events">
+      <div class="container">
+        <div class="container-fluid">
+          <h1 style="text-align:center; margin-top: 6%;">zapewnij sobie niezapomniane wrażenia</h1>
+          <h3 style="text-align:center; font-style: italic; margin-top: 2%; color: #B2994C">wybierz jedną z naszych sal
+            </h2>
+        </div>
+        <div class="row">
+          <button class="col-sm-6 event scrollreveal2"
+            style="background-image: url(wedding-2700495_1920.jpg); box-shadow: 0 10px 20px 0 rgba(0,0,0,0.30);">
+            <div> <img src="img/icons/engagement.png" style="width: 10%; display:block; margin: 0 auto; "></div>
+            <h2 style="text-align: center; text-transform: uppercase; "><a style="color: #B2994C !important" href="salweselna.html">sala weselna</a></h2>
+        </button>
+          <button class="col-sm-6 event scrollreveal3" style="box-shadow: 0 10px 20px 0 rgba(0,0,0,0.30); border-color:#B2994C; background-color: #B2994C;">
+            <div> <img src="img/icons/serving-dish.png" style="width: 10%; display:block; margin: 0 auto;"></div>
+            <h2 style="text-align: center;  text-transform: uppercase;"><a href="salagoralska.html">sala góralska</a>
+            </h2>
+          </button>
+          <div class="w-100"></div>
+          <button class="col-sm-6 event scrollreveal4" style=" box-shadow: 0 10px 20px 0 rgba(0,0,0,0.30); border-color:#B2994C; background-color: #B2994C;">
+            <div> <img src="img/icons/champagne-glass.png" style="width: 10%; display:block; margin: 0 auto;"></div>
+            <h2 style="text-align: center; text-transform: uppercase;"><a href="salaklasyczna.html">sala klasyczna</a>
+            </h2>
+          </button>
+          <button class="col-sm-6 event scrollreveal5"
+            style="background-image: url(fire-8837_1920.jpg); box-shadow: 0 10px 20px 0 rgba(0,0,0,0.30); border-color:#B2994C; ">
+            <div> <img src="img/icons/banquet-table.png" style="width: 10%; display:block; margin: 0 auto;"></div>
+            <h2 style="text-align: center; text-transform: uppercase;"><a href="bacówka.html">bacówka</a></h2>
+        </button>
+        </div>
+        <div class="container-fluid">
+          <h1 style="text-align:center; margin-top: 8%;">zarezerwuj salę</h1>
+        </div>
+        <div class="row" style="width:60%; margin: 3% auto;">
+          <div class="col-sm-6 event"
+            style="border-color:#B2994C; background-color: #B2994C; box-shadow: 0 10px 20px 0 rgba(0,0,0,0.30)">
+            <div> <img src="img/icons/email.png" style="width: 10%; display:block; margin: 2% auto;"></div>
+            <h6
+              style="text-align: center; text-transform: uppercase; color: #fff;  text-transform: uppercase;margin-top:5%">
+              marketing@karczmakuban.pl</h6>
+          </div>
+          <div class="col-sm-6 event"
+            style="border-color:#B2994C; background-color: #B2994C; box-shadow: 0 10px 20px 0 rgba(0,0,0,0.30)">
+            <div> <img src="img/icons/smartphone.png" style="width: 10%; display:block; margin: 2% auto;"></div>
+            <h4
+              style="text-align: center; text-transform: uppercase; color: #fff;  text-transform: uppercase; margin-top:5%">
+              605 461 000</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <span id="example5"></span>
+    <div class="container-fluid bcgimage2" style=" width: 95%!important; padding: 4%;">
+      <div class="container-fluid opacity" style="margin-left:45%" ;>
+        <h1 style="text-align:center; margin-top: 2%; color: rgb(66, 64, 64);">Restauracja Kuban</h1>
+        <h3 style="text-align:center; font-style: italic; margin-top: 2%; color:  #B2994C ;">tradycyjna polska
+          kuchnia</h2>
+          <div style="margin-left:10%; margin-top:5%; margin-right: 10%; color: rgb(66, 64, 64)">
+            <p style="text-align: center">Restauracja Kuban znana jest z <b style="font-weight: bold"><b style="font-weight: bold">doskonałej, polskiej kuchni.</b></p>
+            <p style="text-align: center">Goście doceniają <b style="font-weight: bold">wyborny smak serwowanych potraw</b>, podawane porcje na pewno
+              spełnią Państwa oczekiwania.</p>
+            <p style="text-align: center">W restauracji Kuban proponujemy <b style="font-weight: bold">swojskie specjały polskiej kuchni</b> a nasi
+              kucharze zapewniają, że <b style="font-weight: bold">Goście wyjdą z Karczmy syci.</b></p>
+            <p style="text-align: center">Zapraszamy do zapoznania się z menu!</p>
+          </div>
+          <button class="btnabout" style="display: block; margin: 2% auto;"><a href="restauracja.html">czytaj
+              więcej</a></button>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <h1 style="text-align:center; margin-top: 2%;">Galeria</h1>
+      <h3 style="text-align:center; font-style: italic; margin-top: 2%; color:  #B2994C;">zobacz nas z bliska</h2>
+    </div>
+
+    <span id="example6"></span>
+    <section class="gallery-block compact-gallery">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/karczma/IMG_7075 (Copy).jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/karczma/IMG_7079 (Copy).jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/karczma/IMG_7081 (Copy).jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/hotel/032.jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/hotel/036.jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/hotel/044.jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/hotel/911A7792 (Copy).jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/hotel/051.jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/hotel/075.jpg">
+          </div>
+        </div>
+
+        <div class="row no-gutters">
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/sala weselna/IMG_5554.jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/sala weselna/IMG_5605.jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/sala weselna/IMG_7361.jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/sala weselna/911A5641.jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/sala weselna/IMG_7406.jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/sala weselna/czarneobrusy2.jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/restauracja/DSC01223.jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/restauracja/DSC01973.jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/restauracja/DSC01228.jpg">
+          </div>
+        </div>
+
+        <div class="row no-gutters">
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/restauracja/DSC01976.jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/restauracja/DSC01980.jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/restauracja/20190830_124521.jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/bacówka/IMG_7099.jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/bacówka/IMG_7088.jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/bacówka/IMG_7091.jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/sala konferencyjna/IMG_20190911_161632.jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/sala konferencyjna/IMG_20190911_161603.jpg">
+          </div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover">
+            <img class="img-fluid image" src="img/sala konferencyjna/911A7804 (Copy).jpg">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="row" style="background-color:   #D4BD9B; width: 100%;">
+      <div class="col-sm-4">
+        <img src="img/inne/Logo.png" class="img-fluid" alt="logo"
+          style="width: 60%; padding-left:20%; padding-top:20%; padding-bottom:10%;">
+      </div>
+      <div class="col-sm-4" style="margin-top: 5%;">
+        <p class="footermenu"><a href="#example">1. strona główna</a>
+          <p class="footermenu"><a href="#example2">2. lokalizacja</a>
+            <p class="footermenu"><a href="hotel.html">3. hotel</a></p>
+            <p class="footermenu"><a href="salweselna.html">4. sala weselna</a></p>
+            <p class="footermenu"><a href="restauracja.html">5. restauracja</a></p>
+            <p class="footermenu"><a href="bacówka.html">6. bacówka</a></p>
+            <p class="footermenu"><a href="salaklasyczna.html">7. sala klasyczna</a></p>
+            <p class="footermenu"><a href="salagoralska.html">8. sala góralska</a></p>
+      </div>
+      <div class="col-sm-4">
+        <p style="margin-top: 10%; font-weight: bold; font-size: 1rem; margin-left: 5%">Karczma Kuban</p>
+        <p style="margin: 0; font-size: 1rem; margin-left: 5%">ul. Spokojna 72</p>
+        <p style="margin: 0; font-size: 1rem; margin-left: 5%">43-230 Goczałkowice-Zdrój</p>
+        <p style="margin: 0; font-size: 1rem; margin-left: 5%">tel. 32 442 04 10</p>
+        <p style="margin: 0; font-size: 1rem; margin-left: 5%">e-mail. karczma@karczmakuban.pl</p>
+        <a href="https://pl-pl.facebook.com/karczmakuban/"><img src="img/icons/facebook.png" class="img-fluid"
+            alt="logo" style="width: 10%;margin-top: 10%; margin-left: 5%"></a>
+      </div>
+
+    </div>
+
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+      integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js">
+    </script>
+    <script src="script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script>
+      baguetteBox.run('.compact-gallery', {
+        animation: 'slideIn'
+      });
+    </script>
+
+</body>
+
+</html>
